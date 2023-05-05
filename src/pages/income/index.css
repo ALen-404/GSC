@@ -1,0 +1,87 @@
+.income {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 15px;
+}
+.income .incomeItem {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  width: 100%;
+  height: 108px;
+  padding: 15px 20px;
+  margin-top: 20px;
+}
+.income .incomeItem .incomeItemTop {
+  display: flex;
+  align-items: center;
+}
+.income .incomeItem .incomeItemTop svg {
+  width: 30px;
+  height: 30px;
+  fill: #18D3A2;
+}
+.income .incomeItem .incomeItemTop p {
+  margin: 0;
+  font-size: 20px;
+  color: #FFFFFF;
+  opacity: 0.6;
+  margin-left: 12px;
+}
+.income .incomeItem .incomeItemBot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+.income .incomeItem .incomeItemBot div {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+.income .incomeItem .incomeItemBot div p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0.5;
+  margin: 0;
+}
+.income .incomeItem .incomeItemBot div span {
+  font-weight: 700;
+  font-size: 18px;
+  color: #18D3A2;
+}
+.income .title {
+  width: 100%;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 28px;
+  color: #18D3A2;
+  text-align: left;
+  position: relative;
+  height: 28px;
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+.income .title::after {
+  content: '';
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(90deg, #18D3A2 0%, rgba(24, 211, 162, 0) 122.09%);
+  border-radius: 1px;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+}
+.income .title::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(180deg, #18D3A2 0%, rgba(24, 211, 162, 0) 100%);
+  border-radius: 50%;
+  opacity: 0.4;
+  position: absolute;
+  top: -15px;
+  left: 0;
+}

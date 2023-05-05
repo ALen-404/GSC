@@ -1,0 +1,163 @@
+.home {
+  padding: 0 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home .homeTop {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  width: 100%;
+  height: 152px;
+  margin-top: 24px;
+  padding: 25px 15px;
+  box-sizing: border-box;
+}
+.home .homeTop .topBtnBox {
+  display: flex;
+  justify-content: space-between;
+}
+.home .homeTop .topBtnBox .account {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+.home .homeTop .topBtnBox .wallet {
+  background: #18D3A2;
+  border-radius: 14px;
+  width: 110px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 40px;
+}
+.home .homeTop .topBtnBox .changeLanguage {
+  background: #18D3A2;
+  border-radius: 14px;
+  min-width: 110px;
+  padding: 0 15px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home .homeTop .topBtnBox .changeLanguage svg {
+  width: 16px;
+  height: 16px;
+  fill: #FFFFFF;
+  margin-right: 8px;
+}
+.home .homeTop .topCoinInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  text-align: center;
+}
+.home .homeTop .topCoinInfo h3 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 30px;
+  color: #18D3A2;
+}
+.home .homeTop .topCoinInfo p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+.home .homeMiddle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+  animation: rotates 5s linear infinite;
+}
+.home .homeMiddle .lianjie {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  min-width: 78px;
+  height: 44px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #18D3A2;
+  text-align: center;
+  line-height: 44px;
+  position: absolute;
+  top: 0;
+  padding: 0 19px;
+}
+.home .homeMiddle .earth {
+  margin-top: 20px;
+  display: inline-block;
+  width: 341px;
+  height: 341px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .homeMiddle .quanqiu {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  min-width: 78px;
+  height: 44px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #18D3A2;
+  text-align: center;
+  line-height: 44px;
+  padding: 0 19px;
+  position: absolute;
+  bottom: -10px;
+  opacity: 0.4;
+}
+@keyframes rotates {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+.home .inviteBox {
+  margin-top: 20px;
+  width: 325px;
+  height: 54px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home .inviteBox p {
+  margin: 0;
+  width: 225px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.home .inviteBox svg {
+  width: 34px;
+  height: 34px;
+  fill: #18D3A2;
+}
