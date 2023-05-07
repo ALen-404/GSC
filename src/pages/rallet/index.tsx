@@ -78,7 +78,7 @@ const Home: NextPage = () => {
             <div className="addressBox">
               <p>{t('rechargeAddress')}</p>
               <div><p>{recharge?.rechargeAddr}</p>
-                <CopyToClipboard text={recharge?.rechargeAddr ? recharge?.rechargeAddr : t('participateFirst') }>
+                <CopyToClipboard onCopy={()=>{message.success(t('copySucceed'))}} text={recharge?.rechargeAddr ? recharge?.rechargeAddr : t('participateFirst') }>
                   <RecordIcon></RecordIcon>
                 </CopyToClipboard></div>
             </div>

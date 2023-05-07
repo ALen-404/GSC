@@ -134,7 +134,7 @@ const Home: NextPage = () => {
         </div>
         <div className="inviteBox">
           <p>{InvitationLink == "0" ? t('participateFirst') : InvitationLink}</p>
-          <CopyToClipboard text={InvitationLink == "0" ? t('participateFirst') : InvitationLink}>
+          <CopyToClipboard onCopy={()=>{message.success(t('copySucceed'))}} text={InvitationLink == "0" ? t('participateFirst') : InvitationLink}>
             <RecordIcon></RecordIcon>
           </CopyToClipboard>
         </div>

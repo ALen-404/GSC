@@ -22,5 +22,7 @@
   "recharge": "recharge",
   "rechargeAddress": "recharge Address",
   "witndrawAmount": "witndraw Amount",
-  "confirm": "confirm"
+  "confirm": "confirm",
+  "copySucceed":"Copy Succeed"
+
 }
