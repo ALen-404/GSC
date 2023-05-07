@@ -48,7 +48,7 @@ const Home: NextPage = () => {
             <div className="incomeItem" key={item.id}>
               <div className="incomeItemTop">
                 <RecordIcon></RecordIcon>
-                <p>{item?.parentAddr.slice(0,4)}...{item?.parentAddr.slice(item?.parentAddr.length-4,item?.parentAddr.length)}</p>
+                <p>{item?.address.slice(0,4)}...{item?.address.slice(item?.address.length-4,item?.address.length)}</p>
               </div>
               <div className="incomeItemBot">
                 <div>

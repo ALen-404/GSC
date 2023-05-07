@@ -18,10 +18,27 @@ import RecordIcon from '../../assets/footer/record.svg'
 import { isMobile } from "web3modal";
 import { Link, useLocation } from "react-router-dom";
 
+
 const Footer: NextPage = () => {
-  const [urlQuery,setUrlQuery] = useState('')
-    
-    const location = useLocation()
+  const [urlQuery, setUrlQuery] = useState('')
+
+  document.addEventListener("gesturestart", function (e) {
+    e.preventDefault();
+    // @ts-ignore
+    document.body.style.zoom = 0.99;
+  });
+  document.addEventListener("gesturechange", function (e) {
+    e.preventDefault();
+    // @ts-ignore
+    document.body.style.zoom = 0.99;
+  });
+  document.addEventListener("gestureend", function (e) {
+    e.preventDefault();
+    // @ts-ignore
+    document.body.style.zoom = 1;
+  });
+
+  const location = useLocation()
   const footerMap = [{
     link: '/',
     icon: <HomeIcon></HomeIcon>
@@ -38,10 +55,18 @@ const Footer: NextPage = () => {
     link: '/rallet',
     icon: <WalletIcon></WalletIcon>
   }]
- 
+
   return (
     (
       <div className="footer">
+        <Head>
+          <meta name="renderer" content="webkit" />
+          <title>title</title>
+          <meta name="viewport"content="viewport-fit=cover"></meta>
+          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"></meta>
+          <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+        </Head>
         {footerMap.map(item =>
           <Link to={item.link} key={item.link} className={item.link === location.pathname ? 'curr' : ''}>
             {item.icon}

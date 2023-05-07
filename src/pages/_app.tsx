@@ -5,7 +5,7 @@ import { Web3ReactProvider } from "@web3-react/core";
 import Web3ReactManager from "components/Web3ReactManager/index";
 import dynamic from "next/dynamic";
 import "../react-i18next/i18n";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from './home/index'
 import Income from './income/index'
@@ -20,6 +20,7 @@ import './income/index.css'
 import './record/index.css'
 import './rallet/index.css'
 import 'antd/dist/reset.css';
+import useRem from "hooks/useRem";
 
 export function getLibrary(provider: any): Web3Provider {
   const library = new Web3Provider(provider);
@@ -28,9 +29,14 @@ export function getLibrary(provider: any): Web3Provider {
 }
 
 const Web3ProviderNetwork = dynamic(() => import("../components/Web3ProviderNetwork/index"), { ssr: false });
-{/* <script src=""></script> */ }
+
+
 
 function MyApp({ Component, pageProps }: AppProps) {
+  useRem()
+  useEffect(() => {
+    localStorage.clear()
+  }, [])
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
       <Web3ProviderNetwork getLibrary={getLibrary}>

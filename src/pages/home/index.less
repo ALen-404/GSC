@@ -3,7 +3,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
 
   .homeTop {
     background: rgba(255, 255, 255, 0.1);
@@ -17,10 +17,11 @@
     .topBtnBox {
       display: flex;
       justify-content: space-between;
+      align-items: center;
 
       .account {
         font-weight: 700;
-        font-size: 26px;
+        font-size: 20px;
         line-height: 30px;
         color: #FFFFFF;
       }
@@ -51,6 +52,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        white-space: nowrap;
 
         svg {
           width: 16px;
@@ -70,7 +72,7 @@
 
       h3 {
         font-weight: 700;
-        font-size: 26px;
+        font-size: 22px;
         line-height: 30px;
         color: #18D3A2;
       }
@@ -80,8 +82,17 @@
         font-size: 14px;
         line-height: 17px;
         text-align: center;
-        color: #FFFFFF;
-        opacity: 0.5;
+        color: rgba(255, 255, 255, 0.5);
+        vertical-align: middle;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 16px;
+          height: 16px;
+          margin: 0 2px;
+        }
       }
     }
   }
@@ -94,7 +105,6 @@
     margin-top: 20px;
     position: relative;
     // animation: rotates 1s def;
-    animation: rotates 5s linear infinite;
 
     .lianjie {
       background: rgba(255, 255, 255, 0.1);
@@ -114,14 +124,20 @@
     .earth {
       margin-top: 20px;
       display: inline-block;
-      width: 341px;
-      height: 341px;
+      width: 70vw;
+      height: 70vw;
       margin-bottom: 10px;
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
+
+      img {
+        width: 60vw;
+        animation: rotates 10s linear infinite;
+
+      }
     }
 
     .quanqiu {
@@ -140,11 +156,13 @@
       bottom: -10px;
       opacity: 0.4;
     }
+
     @keyframes rotates {
-      0%{
+      0% {
         transform: rotateZ(0deg);
       }
-      100%{
+
+      100% {
         transform: rotateZ(360deg);
       }
     }
@@ -164,11 +182,12 @@
     font-size: 18px;
     color: #FFFFFF;
     box-sizing: border-box;
-    padding:0 18px;
+    padding: 0 18px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    p{
+
+    p {
       margin: 0;
       width: 225px;
       white-space: nowrap;
