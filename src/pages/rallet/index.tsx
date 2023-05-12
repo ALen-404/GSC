@@ -17,7 +17,7 @@ const Home: NextPage = () => {
     const token = localStorage.getItem('token')
     if (token) {
       if (currSelect == 'DynamicReturns') {
-        axios.get('http://124.71.196.42:8099/rechwith/getRech', {
+        axios.get('http://45.136.15.41:8099/rechwith/getRech', {
           headers: {
             language: i18n.language,
             authorization: token
@@ -41,7 +41,7 @@ const Home: NextPage = () => {
   const confirm = () => {
     const token = localStorage.getItem('token')
     if (token) {
-      axios.post('http://124.71.196.42:8099/rechwith/with', {
+      axios.post('http://45.136.15.41:8099/rechwith/with', {
         amount: withdrawNum,
         paymentPwd: withdrawNum
       }, {
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
       }).then((res) => {
         console.log(res);
         if (res.data.code == 200) {
-          message.error(res.data.msg)
+          message.success(res.data.msg)
         } else {
           message.error(res.data.msg)
         }

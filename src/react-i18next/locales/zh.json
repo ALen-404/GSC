@@ -23,5 +23,6 @@
   "rechargeAddress":"充币地址",
   "witndrawAmount":"提币数量",
   "confirm":"确认提币",
-  "copySucceed":"复制成功"
+  "copySucceed":"复制成功",
+  "TotalDistribution":"总分发"
 }

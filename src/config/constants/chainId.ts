@@ -75,7 +75,7 @@ export enum ChainId {
     // FANTOM_TESTNET = 4002,
     // XDAI = 100,
     BSC = 56,
-    BSC_TESTNET = 97,
+    // BSC_TESTNET = 97,
     // ARBITRUM = 42161,
     // ARBITRUM_TESTNET = 79377087078960,
     // MOONBEAM_TESTNET = 1287,

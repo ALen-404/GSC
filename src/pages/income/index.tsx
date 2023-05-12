@@ -9,14 +9,19 @@ const Home: NextPage = () => {
 
   const { t, i18n } = useTranslation();
   const [incomeRecord, setIncomeRecord] = useState<any[]>([])
-
+  const [dynamiIncomeAll, setDynamiIncomeAll] = useState<string | null>('0')
+  const [staticIncomeAll, setStaticIncomeAll] = useState<string | null>('0')
 
 
 
   useEffect(() => {
+    const dynamiIncome = localStorage.getItem('dynamiIncomeAll')
+    setDynamiIncomeAll(dynamiIncome)
+    const staticIncome = localStorage.getItem('staticIncomeAll')
+    setStaticIncomeAll(staticIncome)
     const token = localStorage.getItem('token')
     if (token) {
-      axios.get('http://124.71.196.42:8099/user/getUserSon', {
+      axios.get('http://45.136.15.41:8099/user/getUserSon', {
         headers: {
           language: i18n.language,
           authorization: token
@@ -43,7 +48,9 @@ const Home: NextPage = () => {
     (
       <div className="income">
         <div className="title">{t('MyBenefits')}</div>
-        {
+        <div className="total"><p>{t("DynamicTotalRevenue")}:</p><p>{dynamiIncomeAll}</p></div>
+        <div className="total"><p>{t("StaticTotalRevenue")}:</p><p>{staticIncomeAll}</p></div>
+        {/* {
           incomeRecord.map(item => (
             <div className="incomeItem" key={item.id}>
               <div className="incomeItemTop">
@@ -62,7 +69,7 @@ const Home: NextPage = () => {
               </div>
             </div>
           ))
-        }
+        } */}
 
 
       </div>

@@ -31,7 +31,7 @@ const Home: NextPage = () => {
 
 
   // 实例化合约
-  const contract = web3UseConnect(GSH, '0x321BEB103D2dB32BcE13B0851807D0c212aFB76D')
+  const contract = web3UseConnect(GSH, '0xec1b39b86e9d088471ea9d60e24adec9e07cb312')
 
   // 获取邀请地址
   useEffect(() => {
@@ -59,8 +59,8 @@ const Home: NextPage = () => {
       if (isBind == '0x0000000000000000000000000000000000000000' && location.search) {
         contract.methods.blind(location.search?.split('=')[1]?.split('&')[0]).send({ from: account, value: 0 })
       } else {
-        // http://124.71.196.42:8099/loginUsingPOST
-        axios.post('http://124.71.196.42:8099/user/login', {
+        // http://45.136.15.41:8099/loginUsingPOST
+        axios.post('http://45.136.15.41:8099/user/login', {
           address: account
         }, {
           headers: {
@@ -69,8 +69,10 @@ const Home: NextPage = () => {
         }).then(res => {
           if (res.data.code == 200) {
             localStorage.setItem('token', res.data.data.authorization)
+            localStorage.setItem('staticIncomeAll', res.data.data.staticIncomeAll)
+            localStorage.setItem('dynamiIncomeAll', res.data.data.dynamiIncomeAll)
             setBalance(res.data.data.balance)
-            axios.get('http://124.71.196.42:8099/bis/getHold', {
+            axios.get('http://45.136.15.41:8099/bis/getHold', {
               headers: {
                 language: i18n.language,
                 authorization: res.data.authorization

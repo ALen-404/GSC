@@ -34,7 +34,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     const token = localStorage.getItem('token')
     if (token) {
-      axios.get('http://124.71.196.42:8099/user/getTong', {
+      axios.get('http://45.136.15.41:8099/user/getTong', {
         headers: {
           language: i18n.language,
           authorization: token
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
     (
       <div className="perfomance">
         <div className="first">
-          <div className="title">{t('first')}</div>
+          <div className="title"><p>{t('first')}</p></div>
           <div>
             <h3>{tongDTO_one?.weight}</h3>
             <p>{t('weight')}</p>
@@ -83,7 +83,7 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="second">
-          <div className="title">{t('second')}</div>
+          <div className="title"><p>{t('second')}</p></div>
           <div>
             <h3>{tongDTO_two?.weight}</h3>
             <p>{t('weight')}</p>
@@ -106,7 +106,7 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="third">
-          <div className="title">{t('more')}</div>
+          <div className="title"><p>{t('more')}</p></div>
           <div>
             <h3>{tongDTO_three_ten?.weight}</h3>
             <p>{t('weight')}</p>
